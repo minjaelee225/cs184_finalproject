@@ -23,30 +23,63 @@
 
 <body>
 
-<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h1>
-<h1 align="middle">Final Project: *insert title here*</h1>
-<h2 align="middle">Daniel Chung, *insert SID* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maddie Pahati, *insert SID*
+<h2 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h2>
+<h1 align="middle">Final Project: Astro Albedo</h1>
+<h2 align="middle">Daniel Chung, 26182074 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maddie Pahati, 3032172703
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min Jae Lee, 26671494</h2>
 
 <div align="middle">
     <table style="width=100%">
         <tr>
             <td>
-                <img src="images/gummi.jpg" align="middle" width="416px"/>
+                <img src="images/game_title.png" align="middle" width="416px"/>
             </td>
         </tr>
     </table>
 </div>
 
 <div>
+    <h2 align="middle">Disclaimer</h2>
+    <p> We were initially planning on creating a phase-change simulator but realized that the scope of the project was quite
+        enormous. We spent some time together trying to make sense of the paper we were trying to base our simulation on, but
+        the paper had a lot of complicated math and physics we could not make sense of. After some consideration, we decided
+        to change our final project entirely and opted for a more reasonable project.
+    </p>
 
-    <h2 align="middle">Overview</h2>
-    <p> We were initially planning on creating a phase-change simulator but realized that the scope of the project was quite enormous and opted to
-    change our final project entirely. Now we are creating a shooter game that integrates Monte Carlo </p>
-    <h2 align="middle">Part 1: Masses and Springs</h2>
-    <p>In order to create a simulation of cloth, I needed to first create the cloth. This was done using by creating an evenly
-        spaced grid of masses with <em>num_width_points</em> by <em>num_height_points</em> total masses spanning <em>width</em> and <em>height</em>
-        lengths. Below are some screenshots of <em>scene/pinned2.json</em> that show the cloth wireframe.</p>
+    <h2 align="middle">Preliminary Results</h2>
+    <p> After getting the approval to change our final project from a TA, we all agreed on making a video game. At first, we
+        really wanted to have colors being the theme of our game. One idea we came up with was giving the player the ability to
+        shoot beams of three different colors. The objective of the game was to take down an enemy of a certain color by
+        shooting it with all three beams. The player would have to reflect/refract the beams on materials made up
+        of different shaders placed across the screen and combine the beams to produce the enemy's color to inflict any type
+        of meaningful damage. However, to play the game would require the player to have a significant knowledge on the
+        wavelength of colors, irradiance falloff, and material modeling to really play the game. Of course, we were also concerned
+        on how fun the game would be. After careful consideration, we decided to not move forward with this idea.
+    </p>
+    <p> After looking at some past examples, the recurring theme amongst groups that had done video games seemed to be a
+        third-person shooter game. We decided to move forward with this idea, but was not really sure as to what our
+        technical graphics component was going to be. After spending some hours brainstorming, we were finally able to come up
+        with something for our milestone.
+    </p>
+
+    <h2 align="middle">Milestone Deliverable</h2>
+    <p> Now we are creating a video game that integrates concepts we learned in class like ray-tracing, Monte Carlo integration,
+        cameras, bezier curves, etc. We are planning on creating an outer space third-person shooter game in Unity3D.
+        The game will take an endless shooter format where the player will shoot lasers that take the shape of cones until
+        the player runs out of health. Enemy AIs will be implemented so that they spawn on random points on the screen and
+        will periodically attack the player. A score will be given based on the number of enemies taken down. As of now,
+        we have some mock-ups of the assets we would like to use in our game.
+    </p>
+
+    <h2 align="middle">Future Plans</h2>
+    <p> The plan as of now is to have a working demo of the actual game in Unity3D by the end of the week using the assets
+        we create. In the demo the player should be able to aim using a mouse and the enemies should spawn randomly on the screen.
+        The player should be able to kill the enemies when firing at them and also take damage when hit by an enemy. After
+        having a demo, the plan would be to implement Monte-Carlo integration into our firing mechanism and giving the enemy
+        the ability to path in a curvature in relation to one another's position. We expect to have some leeway to add some
+        additional features before the final presentation which we will likely discuss after getting the core components of the game
+        integrated.
+    </p>
 
 
 </div>
