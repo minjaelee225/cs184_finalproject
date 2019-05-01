@@ -1,0 +1,3 @@
+/Users/MinJaeLee/cs184/p5-finalproject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/MinJaeLee/cs184/p5-finalproject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/MinJaeLee/cs184/p5-finalproject/cmake-build-debug/CMakeFiles/p5_finalproject.dir
