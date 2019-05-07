@@ -5,7 +5,7 @@ public class laser : MonoBehaviour {
 	public float damage = 1f;
 	public float range = 100f;
 
-	public GameObject playerCam;
+	public Camera camera;
 
 	void Update () {
 		if (Input.GetButtonDown("Fire1")) {
@@ -15,7 +15,9 @@ public class laser : MonoBehaviour {
 
 	void shoot() {
 		RaycastHit hit;
-		if (Physics.Raycast (playerCam.transform.position, playerCam.transform.forward, out hit, range)) {
+		Ray ray = camera.ScreenPointToRay (Input.mousePosition);
+
+		if (Physics.Raycast (ray, out hit, range)) {
 			Debug.Log (hit.transform.name);
 			enemy Enemy = hit.transform.GetComponent<enemy> ();
 			if (Enemy != null) {
