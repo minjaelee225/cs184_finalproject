@@ -31,8 +31,8 @@ public class Generator : MonoBehaviour {
 		while (!stop) {
 			//randEnemy = Random.Range (0, 2);
 
-			Vector3 spawnPositon = new Vector3( Random.Range(-spawnValues.x, spawnValues.x), 0.5f, Random.Range(player.transform.position.z/2f , spawnValues.z));
-			Instantiate(enemies[0], spawnPositon + transform.TransformPoint( 0, 0, 0), gameObject.transform.rotation);
+			Vector3 spawnPositon = new Vector3( Random.Range(-spawnValues.x, spawnValues.x), Random.Range(-spawnValues.y, spawnValues.y), Random.Range(player.transform.position.z/2f , spawnValues.z));
+			Instantiate(enemies[0], spawnPositon + transform.TransformPoint( 0, 0, 0), new Quaternion(0, 180, 0, 1));
 			yield return new WaitForSeconds (spawnWait);
 			
 		}
