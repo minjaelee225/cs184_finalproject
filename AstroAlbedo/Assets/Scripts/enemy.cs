@@ -1,23 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class enemy : MonoBehaviour {
 
-	public float hp = 3f;
+	private float hp = 1000f;
 	public float moveSpeed = 3f;
-	public GameObject player;
-	Vector3 position;
+	private Vector3 pos;
 
-	void Start ()
-	{
-		position = player.transform.position;
+	void Start () {
+		pos = GameObject.FindGameObjectWithTag ("Player").transform.position;
 	}
 
 	void Update () {
-		transform.Translate (0f, 0f, moveSpeed * 1 * Time.deltaTime);
-		if (transform.position.z < position.z - 10) {
-			Destroy (gameObject);
+		pos = GameObject.FindGameObjectWithTag ("Player").transform.position;
+		//transform.Translate (0f, 0f, moveSpeed * 1 * Time.deltaTime);
+		if (transform.position.z < pos.z - 10) {
+			dead ();
 		}
 	}
 
@@ -29,6 +29,7 @@ public class enemy : MonoBehaviour {
 	}
 
 	void dead() {
+		//evaluateStep ();
 		Destroy (gameObject);
 	}
 }

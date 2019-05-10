@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\bez.cs" />
+     <Compile Include="Assets\Scripts\Bezier.cs" />
+     <Compile Include="Assets\Scripts\CrosshairScript.cs" />
      <Compile Include="Assets\Scripts\enemy.cs" />
      <Compile Include="Assets\Scripts\Generator.cs" />
      <Compile Include="Assets\Scripts\laser.cs" />
