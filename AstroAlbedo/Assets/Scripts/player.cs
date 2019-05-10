@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class player : MonoBehaviour {
 
-	private const float X_ANGLE_MIN = -1f;
-	private const float X_ANGLE_MAX = 1f;
-	private const float Y_ANGLE_MIN = -10.0f;
-	private const float Y_ANGLE_MAX = 10.0f;
-
 	public float moveSpeed;
-	public float speed = 10;
+	public float speed = 2;
 	public int hp;
 
 	// Use this for initialization
@@ -21,6 +16,21 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate (moveSpeed * Input.GetAxis ("Alt Horizontal") * Time.deltaTime, moveSpeed * Input.GetAxis ("Alt Vertical") * Time.deltaTime, 0f);
+		//transform.Translate (
+		//	Input.GetAxis ("Alt Horizontal") * Time.deltaTime * moveSpeed,
+		//	Input.GetAxis ("Alt Vertical") * Time.deltaTime * moveSpeed, 0f);
+		if (Input.GetKey (KeyCode.W)) {
+			transform.Translate (0, 5 * Time.deltaTime, 0);
+		}
+		if (Input.GetKey (KeyCode.S)) {
+			transform.Translate (0, -5 * Time.deltaTime, 0);
+		}
+		if (Input.GetKey (KeyCode.A)) {
+			transform.Translate (-5 * Time.deltaTime, 0, 0);
+			transform.Rotate (0, 0, 20 * Time.deltaTime);
+		}
+		if (Input.GetKey (KeyCode.D)) {
+			transform.Translate (5 * Time.deltaTime, 0, 0);
+		}
 	}
 }
