@@ -14,11 +14,11 @@ public class enemy : MonoBehaviour {
 	}
 
 	void Update () {
-		pos = GameObject.FindGameObjectWithTag ("Player").transform.position;
+		//pos = GameObject.FindGameObjectWithTag ("Player").transform.position;
 		//transform.Translate (0f, 0f, moveSpeed * 1 * Time.deltaTime);
-		if (transform.position.z < pos.z - 10) {
-			dead ();
-		}
+		//if (transform.position.z < pos.z - 10) {
+		//	dead ();
+		//}
 	}
 
 	public void applyDamage(float amount) {
@@ -31,5 +31,14 @@ public class enemy : MonoBehaviour {
 	void dead() {
 		//evaluateStep ();
 		Destroy (gameObject);
+	}
+
+	public void OnCollisionEnter(Collision col)
+	{
+		if (col.gameObject.tag == "Player") {
+			player play = col.gameObject.GetComponent<player> ();
+			play.applyDamage (1f);
+			Debug.Log (play.hp);
+		}
 	}
 }

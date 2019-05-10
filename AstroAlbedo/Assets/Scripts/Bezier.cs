@@ -5,10 +5,11 @@ using System.Linq;
 
 public class Bezier : MonoBehaviour {
 
+	GameObject newLine;
 	private LineRenderer lineRenderer;
 	private Vector3 point0, point1, point2, point3;
 
-	public float moveSpeed = 8f;
+	public float moveSpeed = 2f;
 	private int numPoints = 50;
 	private Vector3[] positions = new Vector3[50];
 
@@ -20,12 +21,10 @@ public class Bezier : MonoBehaviour {
 	Vector3 endPoint;
 	float startTime;
 
-
 	// Use this for initialization
 	void Start () {
-		GameObject newLine = new GameObject("Line");
-		lineRenderer = newLine.AddComponent<LineRenderer> ();
-		lineRenderer.startWidth = 0.1f;
+		lineRenderer = gameObject.AddComponent<LineRenderer> ();
+		lineRenderer.startWidth = 0.01f;
 		lineRenderer.positionCount = numPoints;
 		pos = GameObject.FindGameObjectWithTag ("Player").transform.position;
 		Vector3[] points = new Vector3[4];
@@ -44,7 +43,7 @@ public class Bezier : MonoBehaviour {
 		point3 = points [3];
 		//DrawLinear ();
 		//DrawQuad ();
-		DrawCubic ();
+		DrawCubic();
 		currentPosition = 0;
 		startPoint = transform.position;
 		startTime = Time.time;
@@ -53,12 +52,6 @@ public class Bezier : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		/*if (currentPosition < 30) {
-			currentPosition++;
-		}
-		float t = Time.deltaTime / timetoReachTarget;
-		transform.position = Vector3.Lerp (transform.position, positions [currentPosition], t * moveSpeed);*/
-		//DrawCubic ();
 		float i = (Time.time - startTime) / duration;
 		transform.position = Vector3.Lerp (startPoint, endPoint, i);
 		if (i >= 1) {
@@ -67,6 +60,9 @@ public class Bezier : MonoBehaviour {
 			currentPosition = currentPosition % positions.Length;
 			startPoint = endPoint;
 			endPoint = positions[currentPosition];
+		}
+		if (currentPosition >= 49) {
+			Destroy (gameObject);
 		}
 
 	}

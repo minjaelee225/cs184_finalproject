@@ -12,6 +12,7 @@ ModelImporter:
     2300000: base_model
     3300000: base_model
     4300000: base_model
+    6400000: base_model
   materials:
     importMaterials: 1
     materialName: 0

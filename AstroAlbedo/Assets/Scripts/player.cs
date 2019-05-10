@@ -6,12 +6,12 @@ public class player : MonoBehaviour {
 
 	public float moveSpeed;
 	public float speed = 2;
-	public int hp;
+	public float hp;
 
 	// Use this for initialization
 	void Start () {
 		moveSpeed = 1f;
-		hp = 10;
+		hp = 10f;
 	}
 	
 	// Update is called once per frame
@@ -51,4 +51,17 @@ public class player : MonoBehaviour {
 		}
 		target.rotation = rot;
 	}
+
+	public void applyDamage(float amount) {
+		hp -= amount;
+		if (hp <= 0) {
+			dead ();
+		}
+	}
+
+	void dead() {
+		//evaluateStep ();
+		Destroy (gameObject);
+	}
+		
 }
