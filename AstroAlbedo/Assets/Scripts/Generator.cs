@@ -5,7 +5,6 @@ using UnityEngine;
 public class Generator : MonoBehaviour {
 
 	public GameObject[] enemies;
-	public GameObject player;
 	public Vector3 spawnValues;
 	public float spawnWait;
 	public float spawnMostWait;
@@ -14,6 +13,7 @@ public class Generator : MonoBehaviour {
 	public bool stop;
 
 	int randEnemy;
+	private Vector3 pos;
 
 	void Start () {
 		StartCoroutine (waitSpawner ());
@@ -22,6 +22,7 @@ public class Generator : MonoBehaviour {
 
 	void Update () {
 		spawnWait = Random.Range (spawnLeastWait, spawnMostWait);
+		pos = GameObject.FindGameObjectWithTag ("Player").transform.position;
 	}
 
 	// Script for multiple enemies;
@@ -31,9 +32,9 @@ public class Generator : MonoBehaviour {
 		while (!stop) {
 			//randEnemy = Random.Range (0, 2);
 
-			Vector3 spawnPositon = new Vector3( Random.Range(-spawnValues.x + player.transform.position.x, spawnValues.x + player.transform.position.x), 
-				Random.Range(-spawnValues.y + player.transform.position.y, spawnValues.y + + player.transform.position.y), 
-				Random.Range(player.transform.position.z/2f, + player.transform.position.z + spawnValues.z));
+			Vector3 spawnPositon = new Vector3( Random.Range(-spawnValues.x + pos.x, spawnValues.x + pos.x), 
+				Random.Range(-spawnValues.y + pos.y, spawnValues.y + + pos.y), 
+				Random.Range(0, spawnValues.z + pos.z));
 			Instantiate(enemies[0], spawnPositon + transform.TransformPoint( 0, 0, 0), new Quaternion(0, 180, 0, 1));
 			yield return new WaitForSeconds (spawnWait);
 			
