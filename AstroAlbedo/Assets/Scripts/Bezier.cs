@@ -13,14 +13,13 @@ public class Bezier : MonoBehaviour {
 	private Vector3[] positions = new Vector3[50];
 
 	private Vector3 pos;
-	private Vector3[] controlPoints;
 
-	private float duration = .1f;
-	private Vector3 startPoint;
-	private Vector3 endPoint;
-	private float startTime;
-	private int target;
-	Coroutine MoveIE;
+	int currentPosition;
+	float duration = 1.0f;
+	Vector3 startPoint;
+	Vector3 endPoint;
+	float startTime;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -46,22 +45,29 @@ public class Bezier : MonoBehaviour {
 		//DrawLinear ();
 		//DrawQuad ();
 		DrawCubic ();
-		StartCoroutine (moveObject ());
+		currentPosition = 0;
+		startPoint = transform.position;
+		startTime = Time.time;
+		endPoint = positions [currentPosition];
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		/*if (currentPosition < 30) {
+			currentPosition++;
+		}
+		float t = Time.deltaTime / timetoReachTarget;
+		transform.position = Vector3.Lerp (transform.position, positions [currentPosition], t * moveSpeed);*/
+		//DrawCubic ();
 		float i = (Time.time - startTime) / duration;
 		transform.position = Vector3.Lerp (startPoint, endPoint, i);
-		if (i == 1) {
+		if (i >= 1) {
 			startTime = Time.time;
-			target++;
-			target = target % positions.Length;
+			currentPosition++;
+			currentPosition = currentPosition % positions.Length;
 			startPoint = endPoint;
-			endPoint = positions [target];
+			endPoint = positions[currentPosition];
 		}
-		//transform.Translate (0f, 0f, moveSpeed * 1 * Time.deltaTime);
-		//DrawCubic ();
 
 	}
 
@@ -102,24 +108,5 @@ public class Bezier : MonoBehaviour {
 		float u = 1 - t;
 		return (Mathf.Pow(u, 3) * p0) + (3 * Mathf.Pow(u, 2) * t * p1) + (3 * u * Mathf.Pow(t, 2) * p2) + (Mathf.Pow(t, 3) * p3);
 	}
-
-	IEnumerator moveObject() {
-		for (int i = 0; i < positions.Length; i++) {
-			target = i;
-			yield return new WaitForSeconds(1f);
-		}
-	}
-
-	/*IEnumerator moving(int currentPosition) {
-		while (transform.position != positions [currentPosition]) {
-			transform.position = Vector3.MoveTowards (transform.position, positions [currentPosition], moveSpeed * Time.deltaTime);
-			yield return null;
-		}
-	}*/
-	/*void FixedUpdate() {
-		if (target == -1) {
-			return;
-		}
-		transform.position = Vector3.Lerp (transform.position, positions [target], Time.deltaTime * 10);
-	}*/
+		
 }
