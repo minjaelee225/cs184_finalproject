@@ -18,7 +18,6 @@ public class laser : MonoBehaviour {
 		Ray ray = camera.ScreenPointToRay (Input.mousePosition);
 
 		if (Physics.Raycast (ray, out hit, range)) {
-			Debug.Log (hit.transform.name);
 			enemy Enemy = hit.transform.GetComponent<enemy> ();
 			if (Enemy != null) {
 				Enemy.applyDamage (damage);
