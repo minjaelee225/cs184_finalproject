@@ -11,7 +11,7 @@ public class third_person_camera : MonoBehaviour {
 
 	public Transform lookAt;
 	public Transform camTransform;
-	Vector3 offset = new Vector3 (0, 1.5f, -16f);
+	Vector3 offset = new Vector3 (0, 2f, 0);
 
 	private Camera cam;
 
@@ -29,17 +29,17 @@ public class third_person_camera : MonoBehaviour {
 
 	private void Update() {
 		currentX += Input.GetAxis ("Mouse X");
-		//currentY -= Input.GetAxis ("Mouse Y");
+		currentY += Input.GetAxis ("Mouse Y");
 
 		currentX = Mathf.Clamp (currentX, X_ANGLE_MIN, X_ANGLE_MAX);
-		//currentY = Mathf.Clamp (currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+		currentY = Mathf.Clamp (currentY, Y_ANGLE_MIN, Y_ANGLE_MAX	);
 	}
 
-	/*private void LateUpdate() {
+	private void LateUpdate() {
 		Vector3 dir = new Vector3 (0, 0, -distance);
-		Quaternion rotation = Quaternion.Euler (0, currentX, 0);
-		Debug.Log (lookAt.position);
-		camTransform.position = offset + rotation * dir;
-		camTransform.LookAt (lookAt.position);
-	}*/
+		//Vector3 offset = 
+		Quaternion rotation = Quaternion.Euler (currentY, currentX, 0);
+		camTransform.position = lookAt.position + offset + rotation * dir;
+		camTransform.LookAt (lookAt.position + offset);
+	}
 }

@@ -21,12 +21,6 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate (moveSpeed * Input.GetAxis ("Alt Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis ("Alt Vertical") * Time.deltaTime);
-		float mouseInputX = Input.GetAxis ("Mouse X");
-		//float mouseInputY = Input.GetAxis ("Mouse Y");
-		//Debug.Log (mouseInput);
-		//mouseInputX = Mathf.Clamp (mouseInput, X_ANGLE_MIN, X_ANGLE_MAX);
-		Vector3 lookhere = new Vector3 (0, mouseInputX, 0);
-		transform.Rotate (lookhere);
+		transform.Translate (moveSpeed * Input.GetAxis ("Alt Horizontal") * Time.deltaTime, moveSpeed * Input.GetAxis ("Alt Vertical") * Time.deltaTime, 0f);
 	}
 }

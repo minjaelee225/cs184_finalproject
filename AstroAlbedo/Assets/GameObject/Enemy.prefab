@@ -765,3 +765,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  moveSpeed: 3
+  player: {fileID: 1133303086095542, guid: b13c24eb4ca677d49a72ac8c4299c57b, type: 2}
