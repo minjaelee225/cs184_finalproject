@@ -23,6 +23,7 @@ public class Laser1 : MonoBehaviour {
             range += 30;
             target.GetComponent<CrosshairScript>().range += 30;
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z + 2400);
+            
             Debug.Log("hello");
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -30,6 +31,12 @@ public class Laser1 : MonoBehaviour {
             range -= 30;
             target.GetComponent<CrosshairScript>().range -= 30;
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z - 2400);
+            if (range < 30)
+            {
+                range = 30;
+                target.GetComponent<CrosshairScript>().range = 30;
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 2400);
+            }
             Debug.Log("hello");
         }
 
