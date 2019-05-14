@@ -45,11 +45,7 @@
 
 <div>
     <h2 align="middle">Abstract</h2>
-    <p> We were initially planning on creating a phase-change simulator but realized that the scope of the project was quite
-        enormous. We spent some time together trying to make sense of the paper we were trying to base our simulation on, but
-        the paper had a lot of complicated math and physics we could not make sense of. After some consideration, we decided
-        to change our final project entirely and opted for a more reasonable project. As a result, we created a third-person
-        shooter game in Unity where the player shoots a conic beam from a laser at incoming enemies.
+    <p> We were initially planning on creating a phase-change melting simulator but realized that the scope of the project was quite enormous. We spent some time together trying to make sense of the paper we were trying to base our simulation on, but the paper utilized a lot of complicated math and physics that we did not have the technical background to fully understand. After some consideration, we decided to pivot our project direction entirely and opted for a more reasonable idea. We agreed that a 3D game in unity with a few graphical components from the course would be a lot more approachable in scope. To come up with an idea for the game, we thought about the course material and sought after concepts that would be easily utilized in a video game context. An obvious one, that has been used many times before in previous projects, was ray-tracing to shoot projectiles at enemies. However, we wanted to elevate this concept to another level so we thought it would be cool to use the concept of Monte Carlo Integration and how it was used to calculate the irradiance of a light source off a surface. Thus, our project idea was born: an endless runner whereby the player controls a spaceship with a powerful laser that shoots out in a cone, dealing variable damage based on distance and width of the cone. We also decided to include other concepts like Bezier Curves and Mesh Representations to enhance the gameplay.
     </p>
 
     <h2 align="middle">Technical Approach</h2>
@@ -60,16 +56,12 @@
         - A description of problems encountered and how you tackled them.
         - A description of lessons learned. -->
 
-    <h3 align="middle">Unity</h3>
-    <p> Paragraph.
-    </p>
-
     <h3 align="middle">Ray-tracing with a Cone</h3>
-    <p> Paragraph.
+    <p> In order to calculate how much damage the player’s laser was doing to each enemy unit, we used an algorithm inspired by the Monte Carlo Direct Lighting Irradiance Estimator we learned in lecture. The laser always emits a fixed amount of power (damage) at each timestep and is spread evenly across the laser’s “sphere of influence” (the spread of the cone). To estimate the proportion of this damage that each enemy is taking, we shot out N rays randomly within the laser’s cone from the laser’s source. Each ray that struck an enemy applied p/N damage (where p is the total power per timestep of the laser). In this way, if an enemy was only covered by half of the laser, then it would take approximately half of the damage at that time step. This implementation introduced interesting gameplay decisions whereby narrowing the spread of the laser would allow higher damage density while making it harder to aim. Conversely, increasing the laser’s spread would make it easier to hit targets but would lower damage density.
     </p>
 
     <h3 align="middle">Pathing via Bezier Curves</h3>
-    <p> Paragraph.
+    <p> Given that our game was going to be a shooter game, we needed to create objects that the player could shoot at. So, we chose to use a combination of procedural generation and bezier curves for our enemies. An enemy’s spawn point is determined through a random generator. A constraint we placed on the generator was that an enemy would always spawn in front of the player. Just having the enemies path from their spawn point towards the player seemed bland and so we decided to use bezier cubic curves to give our enemies interesting paths towards the player. To define these curves we needed four control points which were the enemy’s position, the player’s position, and two randomly generated points in between the two positions. The function would then generate 50 points on this cubic curve which would be passed on to each enemy as a set of positions it must traverse giving us our desired curved pathing.
     </p>
 
     <h3 align="middle">Model Degradation</h3>
@@ -107,14 +99,15 @@
     <h2 align="middle">Conclusion (lessons learned)</h2>
     <p> Given the time invested, I believe we did a pretty fair job considering how we blew a significant amount of time trying to
         understand a project we probably never would have understood. We learned a lot about Unity. We created a game that was an
-        amalgamation of all the projects we have done during the course.
+        amalgamation of many of the projects we have done during the course.
     </p>
 
     <h2 align="middle">Member Contributions</h2>
     <h3>Dan</h3>
         <ul style="list-style-type:disc;">
-          <li> </li>
-          <li> </li>
+          <li>Implemented Ray-Tracing/Damage calculations</li>
+          <li>Modeled the laser’s beam and aligned the visual model to the scope of the damaging rays
+ </li>
         </ul>
 
     <h3>Maddie</h3>
@@ -125,8 +118,9 @@
 
     <h3>Min Jae</h3>
         <ul style="list-style-type:disc;">
-          <li> </li>
-          <li> </li>
+          <li>Setup the core fundamentals of the game (player, enemies, setting) </li>
+          <li>Implemented procedural generation of enemies </li>
+          <li>Implemented bezier curves </li>
         </ul>
 
 
