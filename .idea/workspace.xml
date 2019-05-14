@@ -58,7 +58,24 @@
       <change beforePath="$PROJECT_DIR$/../p3-2-pathtracer-minjaelee225" beforeDir="false" afterPath="$PROJECT_DIR$/../p3-2-pathtracer-minjaelee225" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../p4-clothsim-minjaelee225" beforeDir="false" afterPath="$PROJECT_DIR$/../p4-clothsim-minjaelee225" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/GameObject/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/GameObject/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/Laser1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/Laser1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/updated_assets/Materials/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/updated_assets/Materials/Scenes/Main Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/00000000000000003000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/00000000000000003000000000000000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0.info" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/0b/0b14fb30c0dba8d4ab68bfedafde973c" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/0b/0b14fb30c0dba8d4ab68bfedafde973c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/a6/a64f290578872954ca610699e65c48fe" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/a6/a64f290578872954ca610699e65c48fe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroAlbedo/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/final.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/final.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,12 +88,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/index.html">
+        <entry file="file://$PROJECT_DIR$/docs/final.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="540">
+              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
               <folding>
-                <element signature="e#1025#1031#0" expanded="true" />
+                <element signature="e#6500#6518#0" expanded="true" />
+                <element signature="e#7228#7246#0" expanded="true" />
+                <element signature="e#7236#7265#0" expanded="true" />
+                <element signature="e#8003#8032#0" expanded="true" />
+                <element signature="e#8253#8282#0" expanded="true" />
+                <element signature="e#8437#8466#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,6 +113,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/docs/index.html" />
+        <option value="$PROJECT_DIR$/docs/final.html" />
       </list>
     </option>
   </component>
@@ -111,6 +134,11 @@
             <path>
               <item name="p5_finalproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="p5-finalproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p5_finalproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p5-finalproject" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -154,17 +182,18 @@
       <updated>1556673204256</updated>
       <workItem from="1556673205698" duration="5550000" />
       <workItem from="1556688660019" duration="173000" />
+      <workItem from="1557875173822" duration="387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5723000" />
+    <option name="totallyTimeSpent" value="6110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -204,10 +233,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="215">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#1025#1031#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/final.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#6500#6518#0" expanded="true" />
+            <element signature="e#7228#7246#0" expanded="true" />
+            <element signature="e#7236#7265#0" expanded="true" />
+            <element signature="e#8003#8032#0" expanded="true" />
+            <element signature="e#8253#8282#0" expanded="true" />
+            <element signature="e#8437#8466#0" expanded="true" />
           </folding>
         </state>
       </provider>

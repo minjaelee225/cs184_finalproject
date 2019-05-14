@@ -10,16 +10,17 @@ public class player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		moveSpeed = 1f;
+		moveSpeed = .5f;
 		hp = 10f;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		//float rot;
 		//transform.Translate (
 		//	Input.GetAxis ("Alt Horizontal") * Time.deltaTime * moveSpeed,
 		//	Input.GetAxis ("Alt Vertical") * Time.deltaTime * moveSpeed, 0f);
+		transform.Translate(0, 0, moveSpeed * Time.deltaTime);
 		if (Input.GetKey (KeyCode.W)) {
 			transform.Translate (0, 5 * Time.deltaTime, 0);
 			transform.Rotate (-10 * Time.deltaTime, 0, 0);
@@ -63,5 +64,5 @@ public class player : MonoBehaviour {
 		//evaluateStep ();
 		Destroy (gameObject);
 	}
-		
+
 }
