@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <style>
+        body {
+            padding: 50px;
+            width: 1000px;
+            margin: auto;
+            text-align: left;
+            font-weight: 300;
+            font-family: 'Open Sans', sans-serif;
+            color: #121212;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+    </style>
+    <title>CS 184 Final Project</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h2 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h2>
+<h1 align="middle">Final Project: Astro Albedo</h1>
+<h2 align="middle">Daniel Chung, 26182074 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maddie Pahati, 3032172703
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min Jae Lee, 26671494</h2>
+
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="images/game.png" align="middle" width="480px"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div align="middle">
+    <h2 align="middle"><a href="milestone.html">Milestone</a> </h2>
+    <h2 align="middle"><a href="https://youtu.be/I1z3HrL12sk">Video (change link)</a> </h2>
+</div>
+
+<div>
+    <h2 align="middle">Abstract</h2>
+    <p> We were initially planning on creating a phase-change simulator but realized that the scope of the project was quite
+        enormous. We spent some time together trying to make sense of the paper we were trying to base our simulation on, but
+        the paper had a lot of complicated math and physics we could not make sense of. After some consideration, we decided
+        to change our final project entirely and opted for a more reasonable project. As a result, we created a third-person
+        shooter game in Unity where the player shoots a conic beam from a laser at incoming enemies.
+    </p>
+
+    <h2 align="middle">Technical Approach</h2>
+    <!-- What to include in this section:
+        - A 1-2 page summary of your technical approach, techniques used, algorithms implemented, etc. (use references to papers
+          or other resources for further detail). Highlight how your approach varied from the references used (did you implement
+          a subset, or did you change or enhance anything), the unique decisions you made and why.
+        - A description of problems encountered and how you tackled them.
+        - A description of lessons learned. -->
+
+    <h3 align="middle">Unity</h3>
+    <p> Paragraph.
+    </p>
+
+    <h3 align="middle">Ray-tracing with a Cone</h3>
+    <p> Paragraph.
+    </p>
+
+    <h3 align="middle">Pathing via Bezier Curves</h3>
+    <p> Paragraph.
+    </p>
+
+    <h3 align="middle">Model Degradation</h3>
+    <p> One of the features we were planning on implementating for our game was a model degradation component, where the enemy loses
+        a certain amount of geometry proportional to how much damage is taken. The idea behind this feature is to taken advantage of
+        the halfedge structure introduced in Project 2. After exporting the enemy model from Maya as a .obj file, we used OpenMesh's
+        halfedge data structure to read in the triangulated model that we can then modify. We accumulate all of the model's faces in
+        an array and shuffle the array to randomize which faces would be deleted. This algorithm also supports the ability to determine
+        exactly how many faces we want to delete. Thus, we can show the model degrading over a period of time.
+    </p>
+    <div align="middle">
+        <table style="width=100%">
+            <tr>
+                <td>
+                    <img src="images/model_deg.gif" align="middle" width="480px"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p> While we can pre-compute these degraded models at various stages, we found it difficult to implement in real time in Unity
+        and unfortunately could not integrate this feature into our game.
+    </p>
+
+    <h2 align="middle">Results</h2>
+    <p> Your final images, animations, video of your system (whichever is relevant). You can include results that you think show off
+        what you built but that you did not have time to go over on presentation day.
+    </p>
+
+    <h2 align="middle">References</h2>
+    <ul style="list-style-type:disc;">
+      <li><a href="https://docs.unity3d.com/2017.1/Documentation/Manual/index.html">Unity Documentation</a></li>
+      <li><a href="https://www.openmesh.org/media/Documentations/OpenMesh-Doc-Latest/index.html">OpenMesh Documentation</a></li>
+    </ul>
+
+    <h2 align="middle">Member Contributions</h2>
+    <h3>Dan</h3>
+        <ul style="list-style-type:disc;">
+          <li> </li>
+          <li> </li>
+        </ul>
+
+    <h3>Maddie</h3>
+        <ul style="list-style-type:disc;">
+          <li>Modeled assets (spaceship, laser, enemy) in Maya</li>
+          <li>Model Degradation</li>
+        </ul>
+
+    <h3>Min Jae</h3>
+        <ul style="list-style-type:disc;">
+          <li> </li>
+          <li> </li>
+        </ul>
+
+
+</div>
+</body>
+</html>
