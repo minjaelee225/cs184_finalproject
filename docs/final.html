@@ -32,7 +32,7 @@
     <table style="width=100%">
         <tr>
             <td>
-                <img src="images/game.png" align="middle" width="480px"/>
+                <img src="images/game_title2.png" align="middle" width="520px"/>
             </td>
         </tr>
     </table>
@@ -49,12 +49,6 @@
     </p>
 
     <h2 align="middle">Technical Approach</h2>
-    <!-- What to include in this section:
-        - A 1-2 page summary of your technical approach, techniques used, algorithms implemented, etc. (use references to papers
-          or other resources for further detail). Highlight how your approach varied from the references used (did you implement
-          a subset, or did you change or enhance anything), the unique decisions you made and why.
-        - A description of problems encountered and how you tackled them.
-        - A description of lessons learned. -->
 
     <h3 align="middle">Ray-tracing with a Cone</h3>
     <p> In order to calculate how much damage the player’s laser was doing to each enemy unit, we used an algorithm inspired by the Monte Carlo Direct Lighting Irradiance Estimator we learned in lecture. The laser always emits a fixed amount of power (damage) at each timestep and is spread evenly across the laser’s “sphere of influence” (the spread of the cone). To estimate the proportion of this damage that each enemy is taking, we shot out N rays randomly within the laser’s cone from the laser’s source. Each ray that struck an enemy applied p/N damage (where p is the total power per timestep of the laser). In this way, if an enemy was only covered by half of the laser, then it would take approximately half of the damage at that time step. This implementation introduced interesting gameplay decisions whereby narrowing the spread of the laser would allow higher damage density while making it harder to aim. Conversely, increasing the laser’s spread would make it easier to hit targets but would lower damage density.
@@ -67,10 +61,11 @@
     <h3 align="middle">Model Degradation</h3>
     <p> One of the features we were planning on implementating for our game was a model degradation component, where the enemy loses
         a certain amount of geometry proportional to how much damage is taken. The idea behind this feature is to taken advantage of
-        the halfedge structure introduced in Project 2. After exporting the enemy model from Maya as a .obj file, we used OpenMesh's
+        the halfedge structure introduced in Project 2. After exporting the enemy model from Maya as an .obj file, we used OpenMesh's
         halfedge data structure to read in the triangulated model that we can then modify. We accumulate all of the model's faces in
         an array and shuffle the array to randomize which faces would be deleted. This algorithm also supports the ability to determine
-        exactly how many faces we want to delete. Thus, we can show the model degrading over a period of time.
+        exactly how many faces we want to delete by indexing into the shuffled array for a given range. Thus, we can show the model
+        degrading over a period of time.
     </p>
     <div align="middle">
         <table style="width=100%">
@@ -81,8 +76,10 @@
             </tr>
         </table>
     </div>
-    <p> While we can pre-compute these degraded models at various stages, we found it difficult to implement in real time in Unity
-        and unfortunately could not integrate this feature into our game.
+    <p> While we can pre-compute these degraded models at various stages, we found it difficult to implement in real time in Unity.
+        Unfortunately, we could not figure out how to edit meshes directly in Unity in a similar way as we did with OpenMesh's halfedge
+        data structure, so we could not integrate this feature into our game by the project due date. However, if we had more time, we
+        would explore different data structures and consider editing the model using Unity's Mesh's triangle and vertex data.
     </p>
 
     <h2 align="middle">Results</h2>
@@ -106,10 +103,11 @@
       <li><a href="https://www.gamasutra.com/blogs/VivekTank/20180806/323709/How_to_work_with_Bezier_Curve_in_Games_with_Unity.php">Bezier Curve Documentation</a></li>
     </ul>
 
-    <h2 align="middle">Conclusion (lessons learned)</h2>
-    <p> Given the time invested, I believe we did a pretty fair job considering how we blew a significant amount of time trying to
-        understand a project we probably never would have understood. We learned a lot about Unity. We created a game that was an
-        amalgamation of many of the projects we have done during the course.
+    <h2 align="middle">Reflections</h2>
+    <p> Given the time invested, we believe we did a pretty fair job considering how we blew a significant amount of time trying to
+        understand a project we probably never would have understood. In building this game from scratch, we learned a lot about Unity, and its various
+        features and limitations. Since various shooter games have been created previously in the course, we had to think a little out of the box in
+        terms of gameplay. As a result, we created a game that was an amalgamation of many of the projects we have done during the course.
     </p>
 
     <h2 align="middle">Member Contributions</h2>
