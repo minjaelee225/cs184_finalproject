@@ -57,25 +57,6 @@
       <change beforePath="$PROJECT_DIR$/../p3-1-pathtracer-minjaelee225" beforeDir="false" afterPath="$PROJECT_DIR$/../p3-1-pathtracer-minjaelee225" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../p3-2-pathtracer-minjaelee225" beforeDir="false" afterPath="$PROJECT_DIR$/../p3-2-pathtracer-minjaelee225" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../p4-clothsim-minjaelee225" beforeDir="false" afterPath="$PROJECT_DIR$/../p4-clothsim-minjaelee225" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/GameObject/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/GameObject/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/Laser1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/Laser1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/Scripts/player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Assets/updated_assets/Materials/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Assets/updated_assets/Materials/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/00000000000000003000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/00000000000000003000000000000000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0.info" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/00/005cc996e70e0404ca4db2b4ef2f5ea0.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/0b/0b14fb30c0dba8d4ab68bfedafde973c" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/0b/0b14fb30c0dba8d4ab68bfedafde973c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/a6/a64f290578872954ca610699e65c48fe" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/metadata/a6/a64f290578872954ca610699e65c48fe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroAlbedo/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/AstroAlbedo/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/final.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/final.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/final.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+            <state relative-caret-position="480">
+              <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
               <folding>
                 <element signature="e#6500#6518#0" expanded="true" />
                 <element signature="e#7228#7246#0" expanded="true" />
@@ -182,12 +163,12 @@
       <updated>1556673204256</updated>
       <workItem from="1556673205698" duration="5550000" />
       <workItem from="1556688660019" duration="173000" />
-      <workItem from="1557875173822" duration="387000" />
+      <workItem from="1557875173822" duration="477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6110000" />
+    <option name="totallyTimeSpent" value="6200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -243,8 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/final.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        <state relative-caret-position="480">
+          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
           <folding>
             <element signature="e#6500#6518#0" expanded="true" />
             <element signature="e#7228#7246#0" expanded="true" />
